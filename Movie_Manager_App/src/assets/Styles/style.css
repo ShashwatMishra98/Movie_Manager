@@ -1,0 +1,256 @@
+body {
+    min-width: 1050px;
+}
+
+/* Nav bar css properties */
+.menu-nav {
+    position: block;
+    top: 0%; left: 0%;
+    text-align: left;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.685);
+}
+.nav-link {
+    margin: 0%;
+}
+/* .nav-link li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+} */
+.nav-link li {
+    margin: 0 0 0 30px;
+    padding: 15px 0px;
+    display: inline-block;
+}
+.nav-link li:hover {
+    color: rgb(0, 106, 255);
+    cursor: pointer;
+    border-bottom: 2px solid rgb(0, 106, 255);
+    /* background-color: rgba(0, 0, 0, 0.7);; */
+}
+.home {
+    margin: 0 0 0 30px;
+    padding: 15px 0px;
+    display: inline-block;
+    color: rgb(0, 106, 255);
+    cursor: pointer;
+}
+
+
+/* .search-box {
+    position: absolute;
+}
+.menu-nav input {
+    position: fixed;
+    float: right;
+    top: 1%;
+    right: 0%;
+    height: 40px;
+} */
+/* .search-box {
+    position: relative;
+} */
+.menu-nav input {
+    position:block;
+    float: right;
+    top: 1%;
+    right: 0%;
+    height: 40px;
+}
+.menu-nav input:last-child {
+    color: white;
+    background-color: rgb(0, 106, 255);
+    border: none;
+    height: 46px;
+}
+.menu-nav input:first-child:focus {
+    box-shadow: 0px 0px 6px rgb(0, 106, 255);
+    outline: none;
+}
+
+
+/* tab selection css properties */
+.movies-in-theaters .tab1, .movies-coming .tab2, .top-rated-india .tab3, .top-rated-movies .tab4, .favourit .tab5 {
+    color: rgb(0, 70, 168);
+    border-bottom: 2px solid rgb(0, 106, 255);
+}
+
+
+/* movielist properties */
+.movielist {
+    margin: 0px 20px;
+    text-align: justify;
+    width: auto;
+}
+
+.card-container {
+    text-align: center;
+    display: inline-block;
+    width: 205px;
+    height: 325px;
+    margin: 0 0 30px 30px;
+}
+.card {
+    text-align: center;
+    display: inline-block;
+    width: 205px;
+    height: 330px;
+    border: 0.5px solid rgba(204, 204, 204, 0.5);
+    color: black;
+}
+.card:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.poster, .card img {
+    width: 205px;
+    height: 250px;
+}
+.card button {
+    background-color: white;
+    border: none;
+    color:rgb(127, 127, 127);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding: 0px 10px;
+    z-index: 1;
+}
+.card button:hover {
+    color: crimson;
+}
+.card p:first-child {
+    font-weight: 500;
+}
+article p {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+article {
+    display: flex;
+    margin: 0%;
+    padding: 5px 10px;
+}
+
+
+.no-data {
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(127, 127, 127);
+    font-size: large;
+    font-weight: 400;
+}
+
+
+/* movie content view */
+.view-content {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+}
+
+/* movie content poster properties */
+.poster-view {
+    display: inline-block;
+    position: relative;
+    height: 400px;
+    background-color: black;
+    cursor: pointer;
+}
+.poster-view img {
+    width: 250px;
+    height: 400px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.poster-view span {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.poster-view:hover img {
+    opacity: 0.5;
+}
+.poster-view:hover span {
+    opacity: 1;
+}
+
+/* movie content text properties */
+.content-text {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.content-text h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+.content-text span::before {
+    content: "(";
+}
+.content-text span::after {
+    content: ")";
+}
+.content-text td:first-child {
+    width: 20%;
+    vertical-align: text-top;
+    line-height: 2;
+}
+
+/* movie poster image view */
+.banner-view {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.532);
+    color: white;
+}
+.banner-view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.font-small {
+    font-size: small;
+}
+
+
+/* hover to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 60px;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border-radius: 60px;
+    border: none;
+    box-shadow: 0 5px 10px black/*#ccc*/;
+}
+.back-to-top:hover {
+    background: crimson;
+}
